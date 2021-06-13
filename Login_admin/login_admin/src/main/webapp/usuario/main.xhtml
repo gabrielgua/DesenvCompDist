@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<ui:composition template="/WEB-INF/include/template.xhtml">
+	
+	<ui:define name="head">
+		<title>Bem vindo!</title>
+	</ui:define>
+	<ui:define name="body">
+		<div class="container">
+			<div class="row">
+				<ui:include src="/WEB-INF/include/menu.xhtml"/>	
+				
+				<div class="col-sm-12" style="margin: auto;" >
+					<div style="margin-top: 15px; padding: 10px; padding-left: 20px; box-shadow: black 0px 1px 10px -4px;"> 
+						<h3 class="font-weight-bold text-white">Bem Vindo! Você está logado!</h3>	
+					</div>
+				</div>
+			</div>
+		</div>
+	</ui:define>
+</ui:composition>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<ui:composition template="/WEB-INF/include/template.xhtml">
+	
+	<ui:define name="head">
+		<title>Login</title>
+	</ui:define>
+	<ui:define name="body">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4" style="padding: 20px; margin: auto;">
+					<div class="container p-3 bg-dark" style="margin: 5px; ">
+						<h:form styleClass="inline-form">							
+							<div style="padding: 25px; box-shadow: black 0px 1px 10px -4px; border-radius: 8px;" class="form-group text-white">	
+								<h3 class="font-weight-bold text-white" style="margin-bottom: 20px;">Login</h3>
+								<h:outputLabel value="Email" />
+								<h:inputText value="#{UsuarioCT.usuario.email}" required="true" styleClass="form-control text-white bg-dark" style="border: 1px solid #00FFC9;"/><br/>
+								
+								<h:outputLabel value="Senha" />
+								<h:inputSecret value="#{UsuarioCT.usuario.senha}" required="true" styleClass="form-control text-white bg-dark" style="border: 1px solid #00FFC9;"/><br/>
+								
+								<h:messages autoUpdate="true" style="color: red; list-style: none; padding: 0px;"/>
+								<h:commandButton action="#{UsuarioCT.login(UsuarioCT.usuario.email, UsuarioCT.usuario.senha)}" value="Enviar" styleClass="btn btn-primary"/>
+								<h:link style="color: #00FFC9; margin-left: 120px" value="Cadastrar" outcome="/usuario/cadastrar.xhtml" /><br/>
+								
+							</div>
+						</h:form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</ui:define>
+</ui:composition>
+</html>

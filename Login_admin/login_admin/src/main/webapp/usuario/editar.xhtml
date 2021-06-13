@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<ui:composition template="/WEB-INF/include/template.xhtml">
+	
+	<ui:define name="head">
+		<title>Editar Usuario</title>
+	</ui:define>
+	<ui:define name="body">
+		<div class="container">
+			<div class="row">
+				<ui:include src="/WEB-INF/include/menu.xhtml"/>
+				<div class="col-sm-12" style="margin-top: 20px;">
+					<div class="col-sm-6" style="color: white; border-radius: 5px; box-shadow: black 0px 1px 10px -4px; padding: 20px; margin: auto;">
+						<h:form>
+							<h3 class="font-weight-bold text-white">Editar</h3>
+							<h:outputLabel for="id" value="ID:"/>
+							<h:outputText id="id" value="#{UsuarioCT.usuario.usuario_id}" styleClass="form-control text-white" style="background-color: #272A2E; border: none;"/><br />
+								
+							<h:outputLabel for="email" value="Email:"/>
+							<h:inputText id="email" value="#{UsuarioCT.usuario.email}" required="true" styleClass="form-control text-white bg-dark" style="border: 1px solid #00FFC9;" /><br/>
+										
+							<h:messages autoUpdate="true" style="color: red; list-style: none; padding: 0px;"/>
+							<h:commandButton styleClass="btn btn-primary" value="Enviar" action="#{UsuarioCT.aplicar}"/>
+							<h:commandButton styleClass="btn btn-danger" style="margin-left: 15px;" value="Remover" action="#{UsuarioCT.remover(UsuarioCT.usuario.usuario_id)}"/>
+						</h:form>
+					</div>
+				</div>
+			</div>	
+		</div>		
+	</ui:define>
+</ui:composition>
+</html>
