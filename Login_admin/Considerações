@@ -1,0 +1,8 @@
+Sistema feito com Java, Maven, Wildfly e Oracle SQL 11g Express.
+
+Para iniciar o banco e configurar, rodar o arquivo "inicializar_banco.sql".
+O admin do sistema já estará na tabela "USUARIO"
+    -> admin@admin.com;
+    -> ADMIN123 (Senha em maiúsculo);
+
+Toda vez que um cadastro for realizado, será necessário logar com o admin e aprovar ou recusar o mesmo. Para só assim se ter acesso ao sistema.
